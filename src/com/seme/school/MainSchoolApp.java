@@ -27,7 +27,6 @@ public class MainSchoolApp {
 
         System.out.println("Welcome to our School ! \n Enter the Student, the teacher and the courses to school !");
 
-
         // *******************  adding students ********************************
 
         System.out.println("Adding Student to the school: ");
@@ -92,6 +91,28 @@ public class MainSchoolApp {
             seeOption= input.nextLine();
 
         }while(seeOption.equalsIgnoreCase("yes"));
+
+        //******************listing of the courses  ******************************
+
+        System.out.println("The listing of the courses ");
+        for(Course course:listCourse){
+            System.out.print("ID Number: "+ course.getId()+"\nName: "+ course.getName());
+            for(int i=0;i<listTeacher.size();i++) {
+                if (course.getName().equals(listTeacher.get(i).getCourses().get(i).getName()))
+                    System.out.print("\nTaught By: " + listTeacher.get(i).getFirstName() + " " + listTeacher.get(i).getLastName());
+                else
+                    System.out.print("\nTaught By: No one ");
+            }
+            for(int j=0;j<listStudent.size();j++) {
+                if (course.getName().equals(listStudent.get(j).getCourses().get(j).getName()))
+                    System.out.print("\nTaken by: "+ listStudent.get(j).getFirstName()+" "+listStudent.get(j).getLastName());
+                else
+                    System.out.print("\nTaken By: No one ");
+
+            }
+            System.out.println("\n");
+
+        }
 
 
         System.out.println("Thank you for your Information ! Good Bye ");
