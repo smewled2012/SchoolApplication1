@@ -98,7 +98,7 @@ public class MainSchoolApp {
     }
 
 
-
+    //a method that adds courses to the school
     private static ArrayList<Course> addCourses() {
         ArrayList<Course> listCourse= new ArrayList<>();
 
