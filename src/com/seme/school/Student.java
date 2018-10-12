@@ -8,12 +8,24 @@ public class Student {
     private String lastName;
      private String email;
      private long id ;
+     private ArrayList<Course> courses;
+
 
     public Student() {
+       this.courses= new ArrayList<>();
+    }
+
+    public ArrayList<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(ArrayList<Course> courses) {
+        this.courses = courses;
     }
 
     public String getFirstName() {
         return firstName;
+
     }
 
     public void setFirstName(String firstName) {
